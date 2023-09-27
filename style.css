@@ -7,6 +7,7 @@
     
     
 }
+
 #wrapper{
     height: 100vh;
     overflow-y: auto;
@@ -129,7 +130,8 @@ a{
     font-weight: 500;
 
 }
-.btn-pink {
+
+.btn-pink  {
     background-color: rgb(248, 79, 79);
     width: fit-content;
     color: white;
@@ -144,6 +146,7 @@ a{
     z-index: 1;
     
 }
+
 
 .btn-pink::before {
     content: "";
@@ -427,9 +430,10 @@ a{
 }
 
 
-.btn-project:hover{
-    border: none; 
-}
+/* .btn-project:hover{
+    transform: scaleX(1); 
+    
+} */
 
 .icon{
     cursor: pointer;

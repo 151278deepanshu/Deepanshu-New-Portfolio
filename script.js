@@ -1,46 +1,19 @@
-// const btnmode = get("btn-mode");
-// const modetext = get("mode-text");
-// const modeicon = get("mode-icon");
-// btnmode.addEventListener("click", function () {
-//     if (darkMode == false) {
-//       darkModeProperties();
-//     } else {
-//       lightModeProperties();
-//     }
-//   });
+// Get the div element by its ID
+const downloadDiv = document.getElementById("downloadDiv");
 
-// //SWITCH TO DARK MODE - activateDarkMode()
-// function darkModeProperties() {
-//     root.setProperty("--lm-bg", "#141D2F");
-//     root.setProperty("--lm-bg-content", "#1E2A47");
-//     root.setProperty("--lm-text", "white");
-//     root.setProperty("--lm-text-alt", "white");
-//     root.setProperty("--lm-shadow-xl", "rgba(70,88,109,0.15)");
-//     modetext.innerText = "LIGHT";
-//     modeicon.src = "./assets/images/sun-icon.svg";
-//     root.setProperty("--lm-icon-bg", "brightness(1000%)");
-//     darkMode = true;
-//     console.log("darkmode changed to " + darkMode);
-//     localStorage.setItem("dark-mode", true);  console.log("setting dark mode to false");
-  
-//     console.log("setting dark mode to true");
-  
-//   }
-  
-//   //SWITCH TO LIGHT MODE - activateLightMode()
-//   function lightModeProperties() {
-//     root.setProperty("--lm-bg", "#F6F8FF");
-//     root.setProperty("--lm-bg-content", "#FEFEFE");
-//     root.setProperty("--lm-text", "#4B6A9B");
-//     root.setProperty("--lm-text-alt", "#2B3442");
-//     root.setProperty("--lm-shadow-xl", "rgba(70, 88, 109, 0.25)");
-//     modetext.innerText = "DARK";
-//     modeicon.src = "./assets/images/moon-icon.svg";
-//     root.setProperty("--lm-icon-bg", "brightness(100%)");
-//     darkMode = false;
-//     console.log("darkmode changed to " + darkMode);
-  
-//     localStorage.setItem("dark-mode", false);
-//     console.log("setting dark mode to false");
-//   }
-    
+// Define the file URL of your resume
+const resumeUrl = "resume.pdf"; // Change to your actual resume file URL
+
+// Add a click event listener to the div
+downloadDiv.addEventListener("click", () => {
+    // Create an anchor element to trigger the download
+    const anchor = document.createElement("a");
+    anchor.href = resumeUrl;
+    anchor.download = "resume.pdf"; // Change to your desired download filename
+
+    // Trigger a click event on the anchor element
+    anchor.click();
+
+    // Clean up the anchor element
+    anchor.remove();
+});
