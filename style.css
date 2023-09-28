@@ -186,24 +186,24 @@ a{
     animation: scaleImage 5s linear infinite;
 }
 .user-image img{
-    width: 300px;
-    height: auto;
+    width: 320px;
+    height: 380px;
     z-index: -9;
 
 }
 @keyframes scaleImage {
     0%{
-        filter: grayscale(1);
-        transform: scale(1.1);
+        filter: grayscale(1.1);
+        transform: scale(1);
     }
     50%{
-        transform: scale(0.9);
-        filter: greyscale(0);
+        transform: scale(1.1);
+        filter: greyscale(1);
         box-shadow: 3px 3px 10px black;
 
     }
     100%{
-        transform: scale(0.9);
+        transform: scale(1);
         filter: grayscale(0);
     }
     
@@ -310,6 +310,7 @@ a{
         transform: rotateZ(360deg) translateZ(0px);
     }
 }
+
 .project-section{
     background-color: rgb(231, 231, 231);
     margin-top: 4rem;
